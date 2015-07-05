@@ -1,1 +1,10 @@
 @CHARSET "UTF-8";
+.ui-icon.langRU {
+    background: url("images/flags/ru.png") 0 0 no-repeat;
+}
+.ui-icon.langUS {
+    background: url("images/flags/us.png") 0 0 no-repeat;
+}
+#lang-button {
+	float: right
+}

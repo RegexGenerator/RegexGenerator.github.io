@@ -6,15 +6,31 @@
         <SCRIPT src="files/jquery-2.1.4.min.js"></SCRIPT>
         <SCRIPT src="files/jquery-ui-1.11.4.custom/jquery-ui.min.js"></SCRIPT>
         <SCRIPT src="files/main.js"></SCRIPT>
+        <SCRIPT src="files/between.js"></SCRIPT>
     </HEAD>
     <BODY>
+        <DIV>
+            <SELECT name="devLang" id="devLang">
+                <OPTION value="PCRE" data-class="devPCRE" selected="selected">PCRE</OPTION>
+                <OPTION value="JavaScript" data-class="devJavaScript">JavaScript</OPTION>
+            </SELECT>
+	        <SELECT name="lang" id="lang">
+	            <OPTION value="ru" data-class="langRU" selected="selected">Русский</OPTION>
+	            <OPTION value="us" data-class="langUS">English</OPTION>
+	        </SELECT>
+        </DIV>
         <DIV id="tabs">
             <UL>
-                <LI><A href="#tabs-1">Генерация без рекурсии</A></LI>
-                <LI><A href="#tabs-2">Генерация с рекурсией</A></LI>
+                <LI><A href="#tabs-1">Между XXX и YYY</A></LI>
+                <LI><A href="#tabs-2">Диапазоны чисел</A></LI>
             </UL>
             <DIV id="tabs-1">
-                 <BUTTON id="clear">Clear</BUTTON>
+                 Между <INPUT id="start" /> и <INPUT id="end" /><BR/>
+                 <INPUT type="checkbox" id="checkRecur" /><LABEL for="checkRecur">Рекурсивная грамматика</LABEL>
+                 <INPUT type="checkbox" id="checkOptim" /><LABEL for="checkOptim">Оптимизировать</LABEL>
+                 <INPUT type="checkbox" id="checkNoEsc" /><LABEL for="checkNoEsc">Не экранировать</LABEL><BR/>
+                 <BUTTON id="run">Создать</BUTTON><BR/>
+                 <PRE id="result"></PRE>
             </DIV>
             <DIV id="tabs-2">
                  <BUTTON id="clear">Clear</BUTTON>
