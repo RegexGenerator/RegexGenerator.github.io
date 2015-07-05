@@ -69,5 +69,6 @@ function prepareTab2() {
 			} );
 			console.log( text );
 		}
+		$( "#tabs-2 #result" ).html( text );
 	} );
 }
